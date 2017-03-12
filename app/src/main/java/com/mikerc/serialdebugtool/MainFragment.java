@@ -13,9 +13,11 @@ import java.io.InputStream;
 
 /**
  * Created by mike on 3/11/17.
+ *
+ * MainFragment contained in Main Activity
  */
 
-public class MainFragment extends Fragment {
+public class MainFragment extends LoggingFragment {
 
     private TextView mData;
 
