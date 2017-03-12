@@ -11,13 +11,14 @@ import android.view.ViewGroup;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 /**
- * Created by mike on 3/11/17.
+ * Created by Kyle on 3/11/17
+ *
+ * Fragment class that logs life cycle to the console
  */
 
 public class LoggingFragment extends Fragment {
 
     protected final String TAG = getClass().getName();
-
 
     public LoggingFragment() {
         // Required empty public constructor
@@ -30,14 +31,68 @@ public class LoggingFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
-        Log.i(TAG, "onCreateView(LayoutInflater, ViewGroup, Bundle) called.");
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.i(TAG, "onCreateView(LayoutInflater,ViewGroup,Bundle) called." );
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.i(TAG, "onCreate(Bundle) called.");
+    }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.i(TAG, "onActivityCreated(Bundle) called.");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.i(TAG, "onStart() called.");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.i(TAG, "onResume() called.");
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState(Bundle) called.");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.i(TAG, "onPause() called.");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.i(TAG, "onStop() called.");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.i(TAG, "onDestroyView() called.");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "onDestroy() called.");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.i(TAG, "onDetach() called.");
     }
 }
